@@ -6,22 +6,22 @@ import styled from "@alethio/explorer-ui/lib/styled-components";
 import { DashboardPageSlotType } from "./dashboardPage";
 import { DashboardContentCenter } from "app/shared/page/dashboard/DashboardContentCenter";
 import { Title } from "app/shared/page/dashboard/Title";
-import { SubTitle } from "app/shared/page/dashboard/SubTitle";
+// import { SubTitle } from "app/shared/page/dashboard/SubTitle";
 
-const GithubLink = styled.a`
-	color: ${({theme}) => theme.colors.base.accent.color};
-    opacity: 1;
-    transition: opacity linear 100ms;
-    text-decoration: none;
+// const GithubLink = styled.a`
+// 	color: ${({theme}) => theme.colors.base.accent.color};
+//     opacity: 1;
+//     transition: opacity linear 100ms;
+//     text-decoration: none;
 
-    &:hover {
-        opacity: 0.8;
-    }
+//     &:hover {
+//         opacity: 0.8;
+//     }
 
-    &:visited {
-        color: ${({theme}) => theme.colors.base.accent.color};
-    }
-`;
+//     &:visited {
+//         color: ${({theme}) => theme.colors.base.accent.color};
+//     }
+// `;
 
 /** Mobile padding wrapper */
 const ModuleWrapper = styled.div`
@@ -36,22 +36,22 @@ export class DashboardPageTemplate extends React.Component<IDashboardPageTemplat
     render() {
         let { translation: tr, slots } = this.props;
 
-        let [preGitHubLink, postGitHubLink] = tr.get("dashboardView.subTitle").split("{gitHubLink}");
-        let hasGitHubLink = !!postGitHubLink;
+        // let [preGitHubLink, postGitHubLink] = tr.get("dashboardView.subTitle").split("{gitHubLink}");
+        // let hasGitHubLink = !!postGitHubLink;
 
         return (
             <Container>
                 <Content>
                     <DashboardContentCenter>
                         <Title>{ tr.get("dashboardView.title") }</Title>
-                        <SubTitle><span dangerouslySetInnerHTML={{__html: preGitHubLink }} />
+                        {/* <SubTitle><span dangerouslySetInnerHTML={{__html: preGitHubLink }} />
                             {hasGitHubLink && <>
                             <GithubLink href="https://github.com/Alethio/ethereum-lite-explorer"
                                 target="_blank"
                             >GitHub</GithubLink>
                             <span dangerouslySetInnerHTML={{__html: postGitHubLink }} />
                             </> }
-                        </SubTitle>
+                        </SubTitle> */}
                         <ModuleWrapper>
                         { slots[DashboardPageSlotType.Content] }
                         </ModuleWrapper>
