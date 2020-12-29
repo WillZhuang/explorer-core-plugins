@@ -76,6 +76,7 @@
     "accountView.content.accountType.label": "Type",
     "accountView.type.External": "User Account",
     "accountView.type.Contract": "Contract Account",
+    "accountView.content.permission.type": "Permission",
     "accountView.content.balance.label": "Balance",
     "accountView.contract.info.label": "Contract Info",
     "accountView.contract.noData.text": "It seems there is no data to display.",

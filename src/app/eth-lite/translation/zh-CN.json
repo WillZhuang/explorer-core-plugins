@@ -76,6 +76,7 @@
     "accountView.content.accountType.label": "类型",
     "accountView.type.External": "用户帐户",
     "accountView.type.Contract": "合约账户",
+    "accountView.content.permission.type": "权限类型",
     "accountView.content.balance.label": "余额明细",
     "accountView.contract.info.label": "合约信息",
     "accountView.contract.noData.text": "无数据",

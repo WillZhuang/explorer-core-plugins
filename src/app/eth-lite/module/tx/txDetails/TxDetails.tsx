@@ -2,7 +2,8 @@ import * as React from "react";
 import { LayoutRow } from "@alethio/ui/lib/layout/content/LayoutRow";
 import { LayoutRowItem } from "@alethio/ui/lib/layout/content/LayoutRowItem";
 import { Label } from "@alethio/ui/lib/data/Label";
-import { EthValueBox } from "@alethio/ui/lib/data/box/EthValueBox";
+// import { EthValueBox } from "@alethio/ui/lib/data/box/EthValueBox";
+import { BigNumber } from "app/util/BigNumber";
 import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
 // import { GweiValueBox } from "@alethio/ui/lib/data/box/GweiValueBox";
 // import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
@@ -34,10 +35,12 @@ export interface ITxDetailsProps {
 
 export class TxDetails extends React.PureComponent<ITxDetailsProps> {
     render() {
+        // let {
+        //     translation: tr, txDetails: tx, blockBasicInfo: block, txReceipt, locale, blockConfirmationsSlot, ethSymbol
+        // } = this.props;
         let {
-            translation: tr, txDetails: tx, blockBasicInfo: block, txReceipt, locale, blockConfirmationsSlot, ethSymbol
+           translation: tr, txDetails: tx, blockBasicInfo: block, txReceipt, locale, blockConfirmationsSlot
         } = this.props;
-
         return <>
             <LayoutSection useWrapper>
                 <LayoutRow minWidth={960}>
@@ -46,8 +49,9 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                         <TxHashBox noLink>{this.props.txHash}</TxHashBox>
                     </LayoutRowItem>
                     <LayoutRowItem>
-                        <Label arrow disabled={tx.value.isZero()}>{tr.get("txView.content.txValue.label")}</Label>
-                        <EthValueBox wei={tx.value} locale={locale} symbol={ethSymbol} />
+                        <Label arrow disabled={tx.value.isZero()}>{tr.get("accountView.content.permission.type")}</Label>
+                        {/* <EthValueBox wei={tx.value} locale={locale} symbol={ethSymbol} /> */}
+                        <Label>{ "" + tx.value.div(new BigNumber(1000000000000000000)) }</Label>
                         { txReceipt ?
                         <TxStatusBox txReceipt={txReceipt} translation={tr} />
                         : <NotAvailableBox translation={tr} /> }

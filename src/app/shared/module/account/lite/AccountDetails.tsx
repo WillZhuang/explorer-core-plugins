@@ -12,7 +12,7 @@ import { BigNumber } from "app/util/BigNumber";
 import { IAccountDetails } from "app/eth-lite/data/account/IAccountDetails";
 // import { EthValueBox } from "@alethio/ui/lib/data/box/EthValueBox";
 import { NotAvailableBox } from "app/shared/component/NotAvailableBox";
-import { QrCodeBox } from "@alethio/explorer-ui/lib/qrCode/QrCodeBox";
+// import { QrCodeBox } from "@alethio/explorer-ui/lib/qrCode/QrCodeBox";
 import { observer } from "mobx-react";
 
 export interface IAccountDetailsProps {
@@ -41,20 +41,20 @@ export class AccountDetails extends React.Component<IAccountDetailsProps> {
                 <LayoutRowItem>
                     <Label>{tr.get("accountView.content.accountType.label")}</Label>
                     <AccountTypeBox>{tr.get("accountView.type." + AccountType[account.type])}</AccountTypeBox>
-                    <QrCodeBox value={"0x" + this.props.accountHash} logger={this.props.logger} />
+                    {/* <QrCodeBox value={"0x" + this.props.accountHash} logger={this.props.logger} /> */}
                 </LayoutRowItem>
             </LayoutRow>
             { balance &&
             <LayoutRow>
                 <LayoutRowItem>
-                    <Label>{tr.get("accountView.content.balance.label")}</Label>
+                    <Label>{tr.get("accountView.content.permission.type")}</Label>
                     { balance.isLoaded() ?
                     // <EthValueBox locale={locale} wei={balance.data} symbol={ethSymbol} />
                     <LayoutRowItem>
                     <AccountTypeBox>{ balance.data > new BigNumber( 1 ) ? tr.get("accountView.user.administrator") : tr.get("accountView.user.consumer")}</AccountTypeBox>
                     {/* <EthValueBox locale={locale} wei={balance.data} symbol={ethSymbol} /> */}
                     {/* <Label>{balance.data}</Label> */}
-                    <Label>{ "(" + balance.data.div(new BigNumber(1000000000000000000)) + ")" }</Label>
+                    <Label>{ "" + balance.data.div(new BigNumber(1000000000000000000)) }</Label>
                     </LayoutRowItem>
                     :
                     <NotAvailableBox translation={tr} /> }

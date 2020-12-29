@@ -6,7 +6,7 @@ import { Label } from "@alethio/ui/lib/data/Label";
 import { Spacer } from "@alethio/ui/lib/layout/Spacer";
 import { TxCountBox } from "@alethio/explorer-ui/lib/box/block/TxCountBox";
 import { ITranslation } from "plugin-api/ITranslation";
-import { TxHighlightSelector } from "@alethio/explorer-ui/lib/blockTxs/txHighlight/TxHighlightSelector";
+// import { TxHighlightSelector } from "@alethio/explorer-ui/lib/blockTxs/txHighlight/TxHighlightSelector";
 import { ViewSelectorBox } from "@alethio/explorer-ui/lib/blockTxs/ViewSelectorBox";
 import { BlockTxsStateFactory } from "../BlockTxsStateFactory";
 import { BlockTxsState } from "../BlockTxsState";
@@ -58,8 +58,8 @@ export class BlockTxs extends React.Component<IBlockTxsProps> {
                 { txs.length ?
                 <LayoutRowItem>
                     <Label>{tr.get("blockView.content.transactionsHighlight.label")}</Label>
-                    <TxHighlightSelector fields={txsHighlightFields} translation={tr}
-                        disabled={txsViewMode.isTableList} />
+                    {/* <TxHighlightSelector fields={txsHighlightFields} translation={tr}
+                        disabled={txsViewMode.isTableList} /> */}
                     <ViewSelectorBox txsViewMode={txsViewMode} />
                 </LayoutRowItem>
                 : null }

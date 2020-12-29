@@ -16,7 +16,7 @@ import { ParentHashBox } from "@alethio/explorer-ui/lib/box/block/ParentHashBox"
 import { BlockSizeBox } from "@alethio/explorer-ui/lib/box/block/BlockSizeBox";
 // import { AddressHashBox } from "@alethio/explorer-ui/lib/box/account/AddressHashBox";
 import { UncleHashBox } from "@alethio/explorer-ui/lib/box/uncle/UncleHashBox";
-import { UnclesCountBox } from "@alethio/explorer-ui/lib/box/block/UnclesCountBox";
+// import { UnclesCountBox } from "@alethio/explorer-ui/lib/box/block/UnclesCountBox";
 import { ITranslation } from "plugin-api/ITranslation";
 import { IBlockDetails } from "app/eth-lite/data/block/details/IBlockDetails";
 import { BlockDetailsSlotType } from "./BlockDetailsSlotType";
@@ -50,10 +50,10 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                         : null }
                         { slots[BlockDetailsSlotType.Confirmations] }
                     </LayoutRowItem>
-                    <LayoutRowItem>
+                    {/* <LayoutRowItem>
                         <Label>{tr.get("blockView.content.uncles.label")}</Label>
                         <UnclesCountBox locale={locale}>{block.uncles.length}</UnclesCountBox>
-                    </LayoutRowItem>
+                    </LayoutRowItem> */}
                 </LayoutRow>
                 <LayoutRow minWidth={760}>
                     <LayoutRowItem>
