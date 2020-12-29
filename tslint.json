@@ -23,6 +23,7 @@
         ],
         "import-spacing": true,
         "interface-name": true,
+        "max-line-length": [ true, 240 ],
         "member-access": [
             false
         ],

@@ -2,19 +2,19 @@ import * as React from "react";
 import { LayoutRow } from "@alethio/ui/lib/layout/content/LayoutRow";
 import { LayoutRowItem } from "@alethio/ui/lib/layout/content/LayoutRowItem";
 import { Label } from "@alethio/ui/lib/data/Label";
-import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
-import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
-import { DifficultyBox } from "@alethio/ui/lib/data/box/DifficultyBox";
+// import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
+// import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
+// import { DifficultyBox } from "@alethio/ui/lib/data/box/DifficultyBox";
 import { DecodedHexData } from "@alethio/ui/lib/data/hex/DecodedHexData";
-import { HexData } from "@alethio/ui/lib/data/hex/HexData";
-import { HashValueBox } from "@alethio/ui/lib/data/box/HashValueBox";
+// import { HexData } from "@alethio/ui/lib/data/hex/HexData";
+// import { HashValueBox } from "@alethio/ui/lib/data/box/HashValueBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
 import { BlockNumberBox } from "@alethio/explorer-ui/lib/box/block/BlockNumberBox";
 import { TimeElapsedBox } from "app/shared/component/TimeElapsedBox";
 import { BlockHashBox } from "@alethio/explorer-ui/lib/box/block/BlockHashBox";
 import { ParentHashBox } from "@alethio/explorer-ui/lib/box/block/ParentHashBox";
 import { BlockSizeBox } from "@alethio/explorer-ui/lib/box/block/BlockSizeBox";
-import { AddressHashBox } from "@alethio/explorer-ui/lib/box/account/AddressHashBox";
+// import { AddressHashBox } from "@alethio/explorer-ui/lib/box/account/AddressHashBox";
 import { UncleHashBox } from "@alethio/explorer-ui/lib/box/uncle/UncleHashBox";
 import { UnclesCountBox } from "@alethio/explorer-ui/lib/box/block/UnclesCountBox";
 import { ITranslation } from "plugin-api/ITranslation";
@@ -88,10 +88,10 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                 : null }
                 { block.nonce ?
                 <LayoutRow minWidth={710}>
-                    <LayoutRowItem>
+                    {/* <LayoutRowItem>
                         <Label>{tr.get("general.nonce")}</Label>
                         <HashValueBox>{block.nonce}</HashValueBox>
-                    </LayoutRowItem>
+                    </LayoutRowItem> */}
                     <LayoutRowItem>
                         <Label>{tr.get("blockView.content.blockSize.label")}</Label>
                         <BlockSizeBox bytes={block.byteSize} locale={locale} translations={{
@@ -103,7 +103,7 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
             </LayoutSection>
             { slots[BlockDetailsSlotType.Txs]}
             <LayoutSection useWrapper>
-                <LayoutRow minWidth={760}>
+                {/* <LayoutRow minWidth={760}>
                     { block.sha3uncles ?
                     <LayoutRowItem>
                         <Label>{tr.get("blockView.content.sha3Uncles.label")}</Label>
@@ -132,7 +132,7 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                         <Label>{tr.get("blockView.content.difficulty.label")}</Label>
                         <DifficultyBox value={block.difficulty} locale={locale} />
                     </LayoutRowItem>
-                </LayoutRow>
+                </LayoutRow> */}
                 { slots && slots[BlockDetailsSlotType.ExtraData] ||
                 <LayoutRow>
                     <LayoutRowItem autoHeight>
@@ -140,23 +140,23 @@ export class BlockDetails extends React.PureComponent<IBlockDetailsProps> {
                         <DecodedHexData data={block.extraData} />
                     </LayoutRowItem>
                 </LayoutRow> }
-                { block.mixHash ?
+                {/* { block.mixHash ?
                 <LayoutRow minWidth={760}>
                     <LayoutRowItem>
                         <Label>{tr.get("blockView.content.mixHash.label")}</Label>
                         <HashValueBox>{block.mixHash}</HashValueBox>
                     </LayoutRowItem>
                 </LayoutRow>
-                : null }
+                : null } */}
             </LayoutSection>
-            <LayoutSection useWrapper>
+            {/* <LayoutSection useWrapper>
                 <LayoutRow>
                     <LayoutRowItem fullRow autoHeight>
                         <Label>{tr.get("blockView.content.logsBloom.label")}</Label>
                         <HexData data={block.logsBloom} />
                     </LayoutRowItem>
                 </LayoutRow>
-            </LayoutSection>
+            </LayoutSection> */}
         </>;
     }
 }

@@ -30,7 +30,7 @@
     "general.grid.footer.loadMore.label": "Load More",
     "general.grid.footer.norowsavailable.label": "These are not the droids you are looking for",
 
-    "dashboardView.title": "Ethereum Lite Explorer",
+    "dashboardView.title": "DCE Blockchain Explorer",
     "dashboardView.subTitle": "An open source Ethereum block explorer. Available on {gitHubLink}",
 
     "blockView.content.noData.text": "It seems there is no data to display. <br /> Try searching for a different block.",
@@ -74,7 +74,7 @@
 
     "accountView.content.accountHash.label": "Address",
     "accountView.content.accountType.label": "Type",
-    "accountView.type.External": "External Account",
+    "accountView.type.External": "User Account",
     "accountView.type.Contract": "Contract Account",
     "accountView.content.balance.label": "Balance",
     "accountView.contract.info.label": "Contract Info",
@@ -82,5 +82,7 @@
     "accountView.contract.sourceCode.copyCode.label": "Copy code",
     "accountView.contract.accountCode.label": "Account Code",
     "accountView.contract.accountCode.switch.byteCode.label": "Switch to byte code",
-    "accountView.contract.accountCode.switch.opCode.label": "Switch to op code"
+    "accountView.contract.accountCode.switch.opCode.label": "Switch to op code",
+    "accountView.user.administrator": "administrator",
+    "accountView.user.consumer": "consumer"
 }

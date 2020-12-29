@@ -4,8 +4,8 @@ import { LayoutRowItem } from "@alethio/ui/lib/layout/content/LayoutRowItem";
 import { Label } from "@alethio/ui/lib/data/Label";
 import { EthValueBox } from "@alethio/ui/lib/data/box/EthValueBox";
 import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
-import { GweiValueBox } from "@alethio/ui/lib/data/box/GweiValueBox";
-import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
+// import { GweiValueBox } from "@alethio/ui/lib/data/box/GweiValueBox";
+// import { GasUsedValueBox } from "@alethio/ui/lib/data/box/GasUsedValueBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
 import { ValueBox } from "@alethio/ui/lib/layout/content/box/ValueBox";
 import { ErrorIcon } from "@alethio/ui/lib/icon/ErrorIcon";
@@ -75,10 +75,10 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                         <Label>{tr.get("txView.content.txIndex.label")}</Label>
                         <NumberBox value={tx.txIndex} locale={locale} />
                     </LayoutRowItem>
-                    <LayoutRowItem>
+                    {/* <LayoutRowItem>
                         <Label>{tr.get("general.nonce")}</Label>
                         <NumberBox value={tx.nonce} locale={locale} />
-                    </LayoutRowItem>
+                    </LayoutRowItem> */}
                 </LayoutRow>
                 <LayoutRow minWidth={650}>
                     <LayoutRowItem>
@@ -95,7 +95,7 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                     </LayoutRowItem> }
                 </LayoutRow>
             </LayoutSection>
-            <LayoutSection useWrapper>
+            {/* <LayoutSection useWrapper>
                 <LayoutRow minWidth={600}>
                     <LayoutRowItem>
                         <Label>{tr.get("general.gasLimit")}</Label>
@@ -123,7 +123,7 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                         <NumberBox value={txReceipt.cumulativeGasUsed} locale={locale} />
                     </LayoutRowItem>
                 </LayoutRow> }
-            </LayoutSection>
+            </LayoutSection> */}
             { txReceipt && !txReceipt.status ?
             <LayoutSection>
                 <LayoutRow>
