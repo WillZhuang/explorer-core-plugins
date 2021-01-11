@@ -10,7 +10,7 @@ import { NumberBox } from "@alethio/ui/lib/data/box/NumberBox";
 import { LayoutSection } from "@alethio/ui/lib/layout/content/LayoutSection";
 import { ValueBox } from "@alethio/ui/lib/layout/content/box/ValueBox";
 import { ErrorIcon } from "@alethio/ui/lib/icon/ErrorIcon";
-import { HexData } from "@alethio/ui/lib/data/hex/HexData";
+// import { HexData } from "@alethio/ui/lib/data/hex/HexData";
 import { ITranslation } from "plugin-api/ITranslation";
 import { TxHashBox } from "@alethio/explorer-ui/lib/box/tx/TxHashBox";
 import { BlockNumberBox } from "@alethio/explorer-ui/lib/box/block/BlockNumberBox";
@@ -139,14 +139,14 @@ export class TxDetails extends React.PureComponent<ITxDetailsProps> {
                 </LayoutRow>
             </LayoutSection>
             : null }
-            { tx.payload ?
+            {/* { tx.payload ?
                 <LayoutRow>
                     <LayoutRowItem fullRow autoHeight>
                         <Label>{tr.get("txView.content.inputData.label")}</Label>
                         <HexData data={tx.payload} />
                     </LayoutRowItem>
                 </LayoutRow>
-            : null }
+            : null } */}
         </>;
     }
 }
